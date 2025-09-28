@@ -36,11 +36,13 @@ nav ul {
   justify-content: center;
   list-style: none;
   margin-top: 1rem;
+
 }
 nav ul li {
   margin: 0.1rem 0.1rem;
 }
 nav ul li a {
+    background-color: #1a1035;
   font-family: 'Lora', serif;
   text-decoration: none;
   color: #e6e6f0;
@@ -50,7 +52,7 @@ nav ul li a {
   transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 nav ul li a:hover {
-  background: linear-gradient(135deg, #7a4fdc, #00e0ff);
+  background: linear-gradient(135deg, #7a4fdc, #120174);
   color: #fff;
   box-shadow: 0 0 12px #7a4fdc, 0 0 24px #00e0ff;
 }
@@ -64,6 +66,7 @@ nav ul li a:hover {
   border: 1px solid #ffd86b;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.02);
+    background-color: #05013b;
   box-shadow: 0 0 10px #ffd86b33;
 }
 .intro h2 {
@@ -102,6 +105,7 @@ footer {
   background: rgba(255, 255, 255, 0.03);
   box-shadow: 0 0 10px #7a4fdc33;
   color: #ccc;
+    background-color: #1a1035;
 }
 .layer-stack h3, .tuning-framework h3, .steering-techniques h3, .body-tuning h3 {
   font-family: 'Cinzel Decorative', serif;
@@ -143,6 +147,7 @@ td{
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.02);
   box-shadow: 0 0 10px #ffd86b33;
+    background-color: #1a1035;
 }
 .cosmic-law h3 {
   font-family: 'Cinzel Decorative', serif;
@@ -169,6 +174,7 @@ td{
   border: 1px solid #a0e0ff;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.02);
+    background-color: #1a1035;
   box-shadow: 0 0 10px #a0e0ff33;
 }
 .aeon-scroll h3 {
@@ -189,6 +195,7 @@ td{
   border: 1px solid #ffd86b;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.02);
+    background-color: #1a1035;
   box-shadow: 0 0 10px #ffd86b33;
 }
 .calendar-rationale h3, .month-breakdown h3, .symbolic-overlays h3, .comparison h3 {
@@ -209,6 +216,7 @@ td{
   border: 1px solid #7a4fdc;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.02);
+    background-color: #1a1035;
   box-shadow: 0 0 10px #7a4fdc33;
 }
 .spirit-core h3, .modalities h3, .integration h3 {
@@ -233,6 +241,7 @@ td{
   border: 1px solid #ffd86b;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.02);
+    background-color: #1a1035;
   box-shadow: 0 0 10px #ffd86b33;
 }
 .truth-layers h3, .truth-tools h3, .truth-paradoxes h3, .truth-integration h3 {
@@ -253,6 +262,7 @@ td{
   border: 1px solid #a0e0ff;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.02);
+    background-color: #1a1035;
   box-shadow: 0 0 10px #a0e0ff33;
 }
 .chakra-mapping h3, .elemental-correspondence h3, .seasonal-alignment h3, .consciousness-tool h3, .archive-integration h3, .visual-placeholder h3 {
@@ -270,3 +280,40 @@ td{
   text-decoration: underline;
 }
 
+.logo-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.site-logo {
+  max-width: 200px;
+  height: auto;
+  opacity: 0.95;
+}
+
+#starfield {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#galaxy {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background: transparent;
+}

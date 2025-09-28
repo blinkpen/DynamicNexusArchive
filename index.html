@@ -3,18 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dynamic Nexus Archive</title>
+  <title>Cosmic Laws | Dynamic Nexus Archive</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Lora&display=swap" rel="stylesheet">
 </head>
 <body>
+
+
+
+<canvas id="galaxy"></canvas>
+<script>
+const canvas = document.getElementById('galaxy');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const centerX = canvas.width / 2;
+const centerY = canvas.height / 2;
+const numStars = 4000;
+const arms = 5;
+const armSpread = 0.4;
+const maxRadius = Math.sqrt(centerX**2 + centerY**2);
+
+function getColor(r) {
+  const saturation = 1 - r / maxRadius; // 1 near center → 0 at edge
+  const alpha = 0.4 + saturation * 0.6; // opacity from 0.4 to 1.0
+
+  if (r < maxRadius * 0.3) {
+    return `rgba(100,150,255,${alpha})`; // blue core
+  }
+
+  // 🌸 Pink & Purple outer halo with saturation
+  const hue = Math.random() < 0.5
+    ? `rgba(255,150,255,${alpha})`
+    : `rgba(180,100,255,${alpha})`;
+
+  return hue;
+}
+
+// 🌌 Generate stars once
+let stars = [];
+for (let i = 0; i < numStars; i++) {
+  const radius = Math.random() * maxRadius;
+  const baseAngle = radius * 0.05 + (Math.random() - 0.5) * armSpread;
+  const armAngle = (Math.floor(Math.random() * arms) * (2 * Math.PI)) / arms;
+  const finalAngle = baseAngle + armAngle;
+  const r = 0.5 + Math.random() * 2.5;
+  stars.push({ radius, angle: finalAngle, size: r, color: getColor(radius) });
+}
+
+let angleOffset = 0;
+
+function drawGalaxy() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  angleOffset += 0.0002; // 🌠 gentle rotation
+
+  for (let star of stars) {
+const x = centerX + star.radius * Math.cos(star.angle - angleOffset);
+const y = centerY + star.radius * Math.sin(star.angle - angleOffset);
+
+    ctx.beginPath();
+    ctx.arc(x, y, star.size, 0, Math.PI * 2);
+    ctx.fillStyle = star.color;
+    ctx.fill();
+  }
+
+  requestAnimationFrame(drawGalaxy);
+}
+drawGalaxy();
+</script>
+
+
   <header>
-    <h1>Dynamic Nexus Archive</h1> 
+    <h1>Dynamic Nexus Archive</h1>
     <h2>Library of the Cosmic Records</h2>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="cosmic-laws.html">Cosmic Laws</a></li>
+        <li><a href="cosmic-laws.html" class="active">Cosmic Laws</a></li>
         <li><a href="library-of-aeons.html">Library of Aeons</a></li>
         <li><a href="13-month-calendar.html">13 Month Calendar System</a></li>
         <li><a href="spirit-science.html">Spirit Science</a></li>
@@ -25,9 +91,10 @@
   </header>
 
   <main>
-    <section class="intro">
+    <section class="intro">      
       <h2>Welcome, Seeker</h2>
-      <p>Enter the nexus. This archive is a living map of cosmic principles, symbolic systems, and multidimensional truths. Each page is a layer—each layer a lens.</p>
+      <p>Enter the nexus. This archive is a living map of cosmic principles, symbolic systems, and multidimensional truths.</p>
+      <img src="logo.jpeg" alt="Dynamic Nexus Logo" class="site-logo" />
     </section>
 
 <section class="layer-stack">

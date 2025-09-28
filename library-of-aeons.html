@@ -8,6 +8,70 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Lora&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<canvas id="galaxy"></canvas>
+<script>
+const canvas = document.getElementById('galaxy');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const centerX = canvas.width / 2;
+const centerY = canvas.height / 2;
+const numStars = 4000;
+const arms = 5;
+const armSpread = 0.4;
+const maxRadius = Math.sqrt(centerX**2 + centerY**2);
+
+function getColor(r) {
+  const saturation = 1 - r / maxRadius; // 1 near center → 0 at edge
+  const alpha = 0.4 + saturation * 0.6; // opacity from 0.4 to 1.0
+
+  if (r < maxRadius * 0.3) {
+    return `rgba(100,150,255,${alpha})`; // blue core
+  }
+
+  // 🌸 Pink & Purple outer halo with saturation
+  const hue = Math.random() < 0.5
+    ? `rgba(255,150,255,${alpha})`
+    : `rgba(180,100,255,${alpha})`;
+
+  return hue;
+}
+
+// 🌌 Generate stars once
+let stars = [];
+for (let i = 0; i < numStars; i++) {
+  const radius = Math.random() * maxRadius;
+  const baseAngle = radius * 0.05 + (Math.random() - 0.5) * armSpread;
+  const armAngle = (Math.floor(Math.random() * arms) * (2 * Math.PI)) / arms;
+  const finalAngle = baseAngle + armAngle;
+  const r = 0.5 + Math.random() * 2.5;
+  stars.push({ radius, angle: finalAngle, size: r, color: getColor(radius) });
+}
+
+let angleOffset = 0;
+
+function drawGalaxy() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  angleOffset += 0.0002; // 🌠 gentle rotation
+
+  for (let star of stars) {
+const x = centerX + star.radius * Math.cos(star.angle - angleOffset);
+const y = centerY + star.radius * Math.sin(star.angle - angleOffset);
+
+    ctx.beginPath();
+    ctx.arc(x, y, star.size, 0, Math.PI * 2);
+    ctx.fillStyle = star.color;
+    ctx.fill();
+  }
+
+  requestAnimationFrame(drawGalaxy);
+}
+drawGalaxy();
+</script>
+
+
   <header>
     <h1>Dynamic Nexus Archive</h1>
     <h2>Library of the Cosmic Records</h2>
@@ -44,6 +108,35 @@
     <section class="aeon-scroll"><h3>🕊️ Prototheism</h3><p>Before gods, there was pattern. Prototheism explores pre-deific intelligence—laws, forces, and archetypes that precede personified divinity.</p></section>
     <section class="aeon-scroll"><h3>👁️ The Third Eye</h3><p>Inner vision, symbolic sight. The third eye perceives subtle realms, archetypes, and energetic truth beyond the physical.</p></section>
     <section class="aeon-scroll"><h3>📜 The Akashic Records</h3><p>The universal memory field. Every thought, event, and soul imprint is stored in the Akasha—accessible through deep trance, intention, and resonance.</p></section>
+<br>
+<section class="aeon-scroll"><h3>🔴 Root Chakra</h3>
+  <p>Foundation of form. The Root Chakra (Muladhara) anchors the soul into the body, connecting us to earth, survival, and ancestral memory. It governs stability, safety, and primal instinct. When balanced, it grounds intention into action.</p>
+</section>
+
+<section class="aeon-scroll"><h3>🧡 Sacral Chakra</h3>
+  <p>Seat of sensation. The Sacral Chakra (Svadhisthana) flows with emotion, pleasure, and creative impulse. It governs desire, intimacy, and the waters of life. When open, it invites fluidity, passion, and sacred play.</p>
+</section>
+
+<section class="aeon-scroll"><h3>💛 Solar Plexus Chakra</h3>
+  <p>Core of will. The Solar Plexus Chakra (Manipura) radiates personal power, confidence, and autonomy. It governs digestion—of food, emotion, and experience. When activated, it fuels purpose and ignites transformation.</p>
+</section>
+
+<section class="aeon-scroll"><h3>💚 Heart Chakra</h3>
+  <p>Center of connection. The Heart Chakra (Anahata) bridges earth and sky, body and spirit. It governs love, empathy, and relational harmony. When open, it radiates compassion and coherence. The heart is not just an organ—it’s a portal.</p>
+</section>
+
+<section class="aeon-scroll"><h3>💙 Throat Chakra</h3>
+  <p>Voice of truth. The Throat Chakra (Vishuddha) governs expression, communication, and resonance. It tunes language to vibration, allowing thought to become form. When clear, it speaks with integrity and listens with depth.</p>
+</section>
+
+<section class="aeon-scroll"><h3>💜 Third Eye Chakra</h3>
+  <p>Lens of insight. The Third Eye Chakra (Ajna) perceives beyond the veil—into archetype, symbol, and subtle realm. It governs intuition, foresight, and inner vision. When awakened, it reveals the patterns beneath reality.</p>
+</section>
+
+<section class="aeon-scroll"><h3>👑 Crown Chakra</h3>
+  <p>Seat of divine awareness. The Crown Chakra (Sahasrara) opens the channel to source, unity, and transcendence. It is the bridge between form and formlessness, the lotus of a thousand petals unfolding into pure consciousness.</p>
+</section>
+
 
     <section class="reflection">
       <h3>🌀 Closing Reflection</h3>
