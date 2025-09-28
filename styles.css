@@ -1,0 +1,272 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lora', serif;
+  background: radial-gradient(circle at center, #1a1035, #0e0b1d);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #e6e6f0;
+  line-height: 1.7;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+header h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  color: #d6b4ff;
+  text-shadow: 0 0 12px #7a4fdc, 0 0 24px #00e0ff;
+  border-bottom: 2px solid #00e0ff;
+  padding-bottom: 0.5rem;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin-top: 1rem;
+}
+nav ul li {
+  margin: 0.1rem 0.1rem;
+}
+nav ul li a {
+  font-family: 'Lora', serif;
+  text-decoration: none;
+  color: #e6e6f0;
+  padding: 0.5rem 1rem;
+  border: 1px solid #7a4fdc;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+nav ul li a:hover {
+  background: linear-gradient(135deg, #7a4fdc, #00e0ff);
+  color: #fff;
+  box-shadow: 0 0 12px #7a4fdc, 0 0 24px #00e0ff;
+}
+
+/* Main Content */
+.intro {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px solid #ffd86b;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 10px #ffd86b33;
+}
+.intro h2 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+  color: #a0e0ff;
+}
+.intro p {
+  font-size: 1.15rem;
+  color: #ccc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.layer-stack, .transitional-portals, .tuning-framework, .steering-techniques, .body-tuning {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #7a4fdc;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 0 10px #7a4fdc33;
+  color: #ccc;
+}
+.layer-stack h3, .tuning-framework h3, .steering-techniques h3, .body-tuning h3 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #d6b4ff;
+}
+
+header h1 {
+  text-shadow: 0 0 12px #7a4fdc, 0 0 24px #00e0ff;
+}
+nav ul li a:hover {
+  box-shadow: 0 0 12px #7a4fdc, 0 0 24px #00e0ff;
+}
+
+table{
+  border:black, solid, 2px;
+  background-color: #1b005a;
+  box-shadow: 5px 2.5px 2.5px rgb(0, 0, 0);
+}
+
+tr{
+  border:black, solid, 2px;
+  
+}
+
+td{
+  border:black, solid, 2px;
+  background-color: #00386d;
+  padding:10px;
+  
+}
+
+.cosmic-law {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ffd86b;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 10px #ffd86b33;
+}
+.cosmic-law h3 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffd86b;
+}
+.cosmic-law p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+.reflection {
+  max-width: 720px;
+  margin: 3rem auto;
+  text-align: center;
+  font-style: bold;
+  color: #aaa;
+}
+
+.aeon-scroll {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #a0e0ff;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 10px #a0e0ff33;
+}
+.aeon-scroll h3 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #a0e0ff;
+}
+.aeon-scroll p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.calendar-rationale, .month-breakdown, .symbolic-overlays, .comparison {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ffd86b;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 10px #ffd86b33;
+}
+.calendar-rationale h3, .month-breakdown h3, .symbolic-overlays h3, .comparison h3 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffd86b;
+}
+.calendar-rationale ul, .month-breakdown ul, .symbolic-overlays ul, .comparison ul {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.spirit-core, .modalities, .integration {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #7a4fdc;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 10px #7a4fdc33;
+}
+.spirit-core h3, .modalities h3, .integration h3 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #d6b4ff;
+}
+.spirit-core ul, .modalities ul {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+.integration p a {
+  color: #a0e0ff;
+  text-decoration: underline;
+}
+
+.truth-layers, .truth-tools, .truth-paradoxes, .truth-integration {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ffd86b;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 10px #ffd86b33;
+}
+.truth-layers h3, .truth-tools h3, .truth-paradoxes h3, .truth-integration h3 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffd86b;
+}
+.truth-layers ul, .truth-tools ul, .truth-paradoxes ul {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.chakra-mapping, .elemental-correspondence, .seasonal-alignment, .consciousness-tool, .archive-integration, .visual-placeholder {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #a0e0ff;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 10px #a0e0ff33;
+}
+.chakra-mapping h3, .elemental-correspondence h3, .seasonal-alignment h3, .consciousness-tool h3, .archive-integration h3, .visual-placeholder h3 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #a0e0ff;
+}
+.chakra-mapping ul, .elemental-correspondence ul, .seasonal-alignment ul {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+.archive-integration p a {
+  color: #ffd86b;
+  text-decoration: underline;
+}
+
