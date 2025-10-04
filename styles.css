@@ -345,3 +345,26 @@ td{
   background: transparent;
 }
 
+/* Unvisited link */
+a:link {
+  color: rgb(255, 166, 0);
+  text-decoration: none;
+}
+
+/* Visited link */
+a:visited {
+  color: rgb(255, 166, 0);
+    text-decoration: none;
+}
+
+/* Mouse hover over link */
+a:hover {
+  color: rgb(255, 202, 104);
+  text-decoration: none;
+}
+
+/* Selected link (when clicked) */
+a:active {
+  color: rgb(255, 166, 0);
+    text-decoration: none;
+}
